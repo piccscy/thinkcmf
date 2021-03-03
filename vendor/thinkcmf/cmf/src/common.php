@@ -1713,10 +1713,10 @@ function cmf_url_encode($url, $params)
     // 解析参数
     if (is_string($params)) {
         // aaa=1&bbb=2 转换成数组
-        parse_str($params, $params);
+        parse_str($params, $arrparams);
     }
 
-    return base64_encode(json_encode(['action' => $url, 'param' => $params]));
+    return base64_encode(json_encode(['action' => $url, 'param' => $arrparams]));
 }
 
 /**
